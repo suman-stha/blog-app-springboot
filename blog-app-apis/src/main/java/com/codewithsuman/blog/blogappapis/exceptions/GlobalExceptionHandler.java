@@ -1,13 +1,13 @@
 package com.codewithsuman.blog.blogappapis.exceptions;
 
-import com.codewithsuman.blog.blogappapis.payloads.ApiResponse;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@ControllerAdvice
+import com.codewithsuman.blog.blogappapis.payloads.ApiResponse;
+
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
